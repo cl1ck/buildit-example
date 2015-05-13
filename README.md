@@ -1,5 +1,7 @@
 # Example project for `buildit`
 
+[![Build Status](http://ci.cl1ck0ne.net/buildStatus/icon?job=buildit)](http://ci.cl1ck0ne.net/job/buildit/)
+
 `buildit` is a starter project for my personal frontend development projects.
 This is an example project showing how to use it.
 
