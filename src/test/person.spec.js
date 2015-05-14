@@ -1,9 +1,10 @@
-import Person from '../js/person'
-let assert = chai.assert
+import Person from '../js/person';
+let assert = chai.assert;
 
 describe('Person', function() {
     it('should return his name', function() {
-        var person = new Person('test')
-        assert.equal(person.name, 'test')
+        var person = new Person('test');
+        assert.equal(person.name, 'test');
+        assert.equal(person.getName(), 'test');
     })
-})
+});

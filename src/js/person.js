@@ -11,7 +11,7 @@ export default class Person {
      * Returns the person's name
      * @returns {name}
      */
-    name() {
+    getName() {
         return this.name
     }
 }
