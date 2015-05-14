@@ -8,5 +8,6 @@ var del     = require('del');
 var config  = require('../config');
 
 gulp.task('clean-reports', function (cb) {
-    del(config.tests.reportDir, cb);
+    del(config.tests.reportDir);
+    del(config.baseDir + 'checkstyle.xml', cb);
 });
