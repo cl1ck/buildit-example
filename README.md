@@ -1,6 +1,6 @@
 # Example project for `buildit`
 
-[![Build Status](http:/jenkins.cl1ck0ne.net/buildStatus/icon?job=buildit-example)](http:/jenkins.cl1ck0ne.net/job/buildit-example/)
+[![Build Status](http://jenkins.cl1ck0ne.net/buildStatus/icon?job=buildit-example)](http:/jenkins.cl1ck0ne.net/job/buildit-example/)
 
 `buildit` is a starter project for my personal frontend development projects.
 This is an example project showing how to use it.
