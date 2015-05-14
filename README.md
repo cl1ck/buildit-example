@@ -1,6 +1,6 @@
 # Example project for `buildit`
 
-[![Build Status](http:/jenkins.cl1ck0ne.net/buildStatus/icon?job=buildit-example)](http:/jenkins.cl1ck0ne.net/job/buildit-example/)
+[![Build Status](http://jenkins.cl1ck0ne.net/buildStatus/icon?job=buildit-example)](http:/jenkins.cl1ck0ne.net/job/buildit-example/)
 
 `buildit` is a starter project for my personal frontend development projects.
 This is an example project showing how to use it.
@@ -17,5 +17,4 @@ It includes the following tools, tasks, and workflows:
 - Image optimization
 - Error notifications in Notification Center
 
-*NOTE:* This project does not contain any example code! If you want a more complete example of how to use `buildit`
-check out [buildit-example](https://github.com/cl1ck/buildit-example).
+*NOTE:* If you want to use `buildit` for your own project, go to the [buildit repository](https://github.com/cl1ck/buildit).
