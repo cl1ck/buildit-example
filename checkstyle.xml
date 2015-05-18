@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<checkstyle version="4.3">
+	<file name="/Users/rdg/repos/buildit-example/src/js/main.js">
+		<error line="3" column="0" severity="error" message="Multiple var declaration" source="jshint.W disallowMultipleVarDecl" />
+	</file>
+</checkstyle>
