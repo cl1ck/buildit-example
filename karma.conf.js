@@ -3,30 +3,32 @@ module.exports = function(config) {
     config.set({
         basePath: '',
 
-        frameworks: ['jspm', 'mocha', 'sinon-chai', 'phantomjs-shim'],
+        frameworks: ['jspm', 'mocha', 'sinon-chai'],
 
-        // do not add files here, they will be served by karma-jspm
-        files: [],
+        // only load polyfill, the remaining files will be loaded by jspm
+        files: [
+            'node_modules/karma-babel-preprocessor/node_modules/babel-core/browser-polyfill.js'
+        ],
 
         // list of files to exclude
         exclude: [],
 
         // preprocess matching files before serving them to the browser
-        // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
         preprocessors: {
-            'public/js/**/*.js': ['babel', 'coverage'],
-            'public/test/**/*.js': ['babel']
+            'public/js/**/*(!spec).js': ['babel', 'coverage'],
+            'public/js/**/*.spec.js': ['babel']
         },
 
         babelPreprocessor: {
             options: {
-                modules: 'system'
+                modules: 'system',
+                sourceMap: 'inline'
             }
         },
 
         jspm: {
-            loadFiles: ['public/test/**/*.spec.js'],
-            serveFiles: ['public/test/**/*.spec.js', 'public/js/**/*.js'],
+            loadFiles: ['public/js/**/*.spec.js'],
+            serveFiles: ['public/js/**/*.js'],
             config: 'jspm_config.js',
             packages: 'jspm_packages'
         },
@@ -41,8 +43,7 @@ module.exports = function(config) {
             'karma-sinon-chai',
             'karma-coverage',
             'karma-jspm',
-            'karma-phantomjs-launcher',
-            'karma-phantomjs-shim',
+            'karma-phantomjs2-launcher',
             'karma-mocha-reporter',
             'karma-babel-preprocessor'
         ],
@@ -59,13 +60,13 @@ module.exports = function(config) {
             suite: ''
         },
 
-         coverageReporter: {
+        coverageReporter: {
             dir : 'reports/',
             reporters: [
                 { type: 'html', subdir: 'report-html' },
                 { type: 'cobertura', subdir: '.', file: 'cobertura.xml' }
             ]
-         },
+        },
 
         // web server port
         port: 9876,
@@ -77,7 +78,7 @@ module.exports = function(config) {
         autoWatch: true,
 
         // start these browsers
-        browsers: ['PhantomJS'],
+        browsers: ['PhantomJS2'],
 
         // Continuous Integration mode
         // if true, Karma captures browsers, runs the tests and exits
